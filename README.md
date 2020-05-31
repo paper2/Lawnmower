@@ -2,7 +2,7 @@
 `Lawnmower` makes ClusterRole which explicity lists apiGroups and remove specified apiGroup.
 
 Kubernetes RBAC can't use [Deny Rules](https://github.com/kubernetes/kubernetes/issues/85963).
-This tool removes specified apiGroups insted of deny rules.
+This tool removes specified apiGroups instead of deny rules.
 
 ## Build
 
@@ -16,13 +16,13 @@ $ go build -o lawnmower .
 $ ./lawnmower --help
 Usage of ./lawnmower:
   -clusterRoleName string
-    	resource name of cluster role. (default "restricted-cluster-admin")
+    	(optional) resource name of cluster role. (default "restricted-cluster-admin")
   -except string
-    	except apiGroups sepalated by comma. EX) rbac.authorization.k8s.io,networking.k8s.io
+    	(optional) except apiGroups sepalated by comma. EX) rbac.authorization.k8s.io,networking.k8s.io
   -kubeconfig string
     	(optional) absolute path to the kubeconfig file. (default "~/.kube/config")
   -outputFileName string
-    	name of output cluster role file. (default "restricted-cluster-admin-cluster-role.yaml")
+    	(optional) name of output cluster role file. (default "restricted-cluster-admin-cluster-role.yaml")
 ```
 
 ### Make ClusterRole

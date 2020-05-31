@@ -41,13 +41,13 @@ func main() {
 	}
 
 	var exceptapigroups *string
-	exceptapigroups = flag.String("except", "", "except apiGroups sepalated by comma. EX) rbac.authorization.k8s.io,networking.k8s.io")
+	exceptapigroups = flag.String("except", "", "(optional) except apiGroups sepalated by comma. EX) rbac.authorization.k8s.io,networking.k8s.io")
 
 	var crname *string
-	crname = flag.String("clusterRoleName", "restricted-cluster-admin", "resource name of cluster role.")
+	crname = flag.String("clusterRoleName", "restricted-cluster-admin", "(optional) resource name of cluster role.")
 
 	var crfname *string
-	crfname = flag.String("outputFileName", "restricted-cluster-admin-cluster-role.yaml", "name of output cluster role file.")
+	crfname = flag.String("outputFileName", "restricted-cluster-admin-cluster-role.yaml", "(optional) name of output cluster role file.")
 
 	flag.Parse()
 
